@@ -1,0 +1,17 @@
+/target
+/.settings
+/.classpath
+/.project
+/bin
+/.idea
+/*.imi
+target
+.settings
+.classpath
+.project
+bin
+.idea
+*.iml
+/*.iml
+/LOG_FILE_IS_*
+/LOG_FILE_IS_UNDEFINED*

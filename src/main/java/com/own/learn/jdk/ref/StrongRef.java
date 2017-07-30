@@ -5,14 +5,6 @@ package com.own.learn.jdk.ref;
  */
 public class StrongRef {
 
-    public static class Referred {
-
-        @Override
-        protected void finalize() throws Throwable {
-            System.out.println("Referred对象被垃圾收集");
-        }
-    }
-
     public static void collect() throws InterruptedException {
         System.out.println("开始垃圾回收...");
         System.gc();

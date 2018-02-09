@@ -1,4 +1,4 @@
-package com.own.learn.jdk.DeadLock;
+package com.own.learn.jdk.lock;
 
 /**
  * @author wangzhenya

@@ -45,7 +45,7 @@ public class ForkJoinTest extends RecursiveTask<Integer> {
             sum = leftResult + rightResult;
         }
 
-        System.out.println("start : " + start +" , end : " + end + ", sum : " + sum);
+        System.out.println("start : " + start +" , end : " + end + ", sum : ");
         return sum;
     }
 

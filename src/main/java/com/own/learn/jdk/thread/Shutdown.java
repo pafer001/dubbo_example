@@ -1,6 +1,5 @@
 package com.own.learn.jdk.thread;
 
-import com.sun.org.apache.xml.internal.resolver.readers.ExtendedXMLCatalogReader;
 
 import java.util.concurrent.TimeUnit;
 

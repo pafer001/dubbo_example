@@ -1,6 +1,7 @@
 package com.own.learn.jdk.thread;
 
 import java.util.concurrent.locks.AbstractQueuedLongSynchronizer;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 /**
  * @author wangzhenya
@@ -8,7 +9,7 @@ import java.util.concurrent.locks.AbstractQueuedLongSynchronizer;
 public class TwinsLock {
 
     private final Sync sync = new Sync(2);
-    class Sync extends AbstractQueuedLongSynchronizer {
+    class Sync extends AbstractQueuedSynchronizer {
         public Sync(int count) {
             if (count < 0) {
                 throw new IllegalArgumentException("count < 0");
@@ -16,13 +17,15 @@ public class TwinsLock {
             setState(count);
         }
 
+
+
         @Override
-        protected long tryAcquireShared(long arg) {
+        protected int tryAcquireShared(int arg) {
 
             for (;;) {
-                long current = getState();
+                int current = getState();
                 System.out.println(Thread.currentThread() + "  / " + current);
-                long newCount = current - arg;
+                int newCount = current - arg;
                 if (newCount < 0 || compareAndSetState(current, newCount)) {
                     return newCount;
                 }
@@ -30,19 +33,16 @@ public class TwinsLock {
         }
 
         @Override
-        protected boolean tryReleaseShared(long arg) {
+        protected boolean tryReleaseShared(int arg) {
 
             for (;;) {
-                long current = getState();
-                long newCount =  current + arg;
+                int current = getState();
+                int newCount =  current + arg;
                 if (compareAndSetState(current, newCount)) {
                     return true;
                 }
             }
         }
-
-
-
 
     }
 

@@ -8,10 +8,13 @@ import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.util.SelfSignedCertificate;
 
 import java.net.InetSocketAddress;
-import java.util.concurrent.Executors;
 
+/**
+ * Listing 12.7 Adding encryption to the ChatServer
+ *
+ * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
+ */
 public class SecureChatServer extends ChatServer {
-
     private final SslContext context;
 
     public SecureChatServer(SslContext context) {
@@ -24,12 +27,7 @@ public class SecureChatServer extends ChatServer {
         return new SecureChatServerInitializer(group, context);
     }
 
-    @Override
-    public void destory() {
-        super.destory();
-    }
-
-    public static void main(String[] args)   {
+    public static void main(String[] args)  {
         try {
             if (args.length != 1) {
                 System.err.println("Please give port as argument");
@@ -44,7 +42,7 @@ public class SecureChatServer extends ChatServer {
             Runtime.getRuntime().addShutdownHook(new Thread() {
                 @Override
                 public void run() {
-                    endpoint.destory();
+                    endpoint.destroy();
                 }
             });
             future.channel().closeFuture().syncUninterruptibly();

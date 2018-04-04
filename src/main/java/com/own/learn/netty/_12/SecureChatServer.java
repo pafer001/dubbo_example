@@ -31,7 +31,7 @@ public class SecureChatServer extends ChatServer {
 
     public static void main(String[] args)   {
         try {
-            if (args.length != 1) {nn
+            if (args.length != 1) {
                 System.err.println("Please give port as argument");
                 System.exit(1);
             }

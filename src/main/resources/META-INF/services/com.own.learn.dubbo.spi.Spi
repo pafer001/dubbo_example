@@ -1,2 +1,2 @@
 com.own.learn.dubbo.spi.a.SpiAImpl #厂商 A 的 spi 实现全路径类名
-com.own.learn.dubbo.spi.a.SpiBImpl #厂商 B 的 spi 实现全路径类名
+com.own.learn.dubbo.spi.b.SpiBImpl #厂商 B 的 spi 实现全路径类名

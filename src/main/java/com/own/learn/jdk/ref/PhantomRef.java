@@ -14,9 +14,9 @@ public class PhantomRef {
     public static class Referred {
         // Note! 如果这里重写了finalize方法,那么PhantomReference不会追加到ReferenceQueue中
 //        @Override
-//        protected void finalize() throws Throwable {
-//            System.out.println("Referred对象被垃圾收集");
-//        }
+        protected void finalize() throws Throwable {
+           System.out.println("Referred对象被垃圾收集");
+        }
     }
 
     public static void collect() throws InterruptedException {

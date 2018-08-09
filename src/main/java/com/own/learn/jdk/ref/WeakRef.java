@@ -15,15 +15,6 @@ public class WeakRef {
     }
 
     /**
-     * 执行结果
-     * 创建一个弱引用--->
-     * 开始垃圾收集...
-     * 结束垃圾收集...
-     * 删除引用--->
-     * 开始垃圾收集...
-     * 结束垃圾收集...
-     * Referred对象被垃圾收集
-     * Done
      * @param args
      * @throws InterruptedException
      */

@@ -32,7 +32,7 @@ public class SoftRef {
         System.out.println("开始堆占用");
 
         try {
-            List<SoftRef> heap = new ArrayList<>(100000);
+            List<SoftRef> heap = new ArrayList<>(100);
             while (true) {
                 heap.add(new SoftRef());
             }

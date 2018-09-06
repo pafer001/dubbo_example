@@ -28,5 +28,8 @@ public class UnsafeTest {
         UNSAFE.putByte(data, byteArrayBaseOffset, (byte) 1);
         UNSAFE.putByte(data, byteArrayBaseOffset + 5, (byte) 5);
         System.out.println(Arrays.toString(data));
+
+
+
     }
 }

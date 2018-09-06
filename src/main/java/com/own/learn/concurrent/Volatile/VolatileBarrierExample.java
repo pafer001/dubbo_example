@@ -1,11 +1,11 @@
 package com.own.learn.concurrent.Volatile;
 
 /**
- * java -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=print,*com.own.learn.concurrent.VolatileBarrierExample.readAndWrite com.own.learn.concurrent.Volatile.com.own.learn.concurrent.VolatileBarrierExample
+ * java -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=print,*com.own.learn.concurrent.Volatile.com.own.learn.concurrent.VolatileBarrierExample
  */
 public class VolatileBarrierExample {
 
-    volatile long v1 = 1;
+    volatile Long v1 = null;
 
     public static void main(String[] args) {
 
@@ -14,7 +14,6 @@ public class VolatileBarrierExample {
     }
 
     void readAndWrite() {
-
-        v1 = v1 + 1;
+        v1 = 1L;
     }
 }

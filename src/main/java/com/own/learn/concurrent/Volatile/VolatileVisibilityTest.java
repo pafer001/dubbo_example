@@ -1,8 +1,6 @@
 package com.own.learn.concurrent.Volatile;
 
-/**
- * java -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=print,*com.own.learn.concurrent.VolatileBarrierExample.readAndWrite com.own.learn.concurrent.Volatile.com.own.learn.concurrent.VolatileBarrierExample
- */
+
 public class VolatileVisibilityTest implements Runnable {
 
     volatile boolean quit = false;

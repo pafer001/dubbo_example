@@ -1,4 +1,4 @@
-package com.own.algorithm;
+package com.own.algorithm.sort;
 
 /**
  * 简单选择排序是最简单直观的一种算法，基本思想为每一趟从待排序的数据元素中选择最小（或最大）的一个元素作为首元素，

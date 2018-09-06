@@ -1,4 +1,4 @@
-package com.own.algorithm;
+package com.own.algorithm.sort;
 
 /**
  * 没有调试通过

@@ -1,4 +1,4 @@
-package com.own.algorithm;
+package com.own.algorithm.sort;
 
 /**
  * 自下向上

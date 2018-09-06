@@ -1,4 +1,4 @@
-package com.own.algorithm;
+package com.own.algorithm.sort;
 
 /**
  * 每一步将一个待排序的记录

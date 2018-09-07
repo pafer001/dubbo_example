@@ -1,4 +1,4 @@
-package com.own.learn.cglib;
+package com.own.learn.aop.cglib;
 
 public class Dao {
 

@@ -1,64 +1,49 @@
 package com.own.algorithm.sort;
 
 /**
- * 没有调试通过
+ * 通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，
+ * 然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
  */
-public class QuickSort {
+public class QuickSort extends BaseSort {
+
 
     public static void main(String[] args) {
-        int array[] = {1,51,7,20};
-        new QuickSort().quickSort(0, array.length -1, array);
-        System.out.println(array);
+
+        int[] array = {6, 9, 1, 5, 11};
+        QuickSort quickSort = new QuickSort();
+        quickSort.sort(array, 0, 4);
+        print(array);
     }
 
-    public void quickSort(int left, int right, int array[]) {
 
-        if (left >= right || left < 0 && right < 0) {
-            return;
-        }
-        int index = left;
-        int sortValue = array[index];
+    public int sort(int[] array, int low, int high) {
 
-        int i = right;
-        int j = left;
+        int i = low + 1, j = high;
 
-        while (i > j) {
+        int point = low;
 
-            while (i >= left) {
+        while (j > point) {
 
-                if (array[i] < sortValue) {
+            if (array[j] < array[point]) {
 
-                    int tmpValue = array[i];
-
-                    array[i] = sortValue;
-                    sortValue = tmpValue;
-                    index = i;
-                    break;
-                }
-                i--;
+                swap(array, point, j);
+                point = j;
+                j = high;
+                continue;
             }
-
-            while (j <= right) {
-
-                if (sortValue > array[j]) {
-                    int tmpValue = array[j];
-                    array[j] = sortValue;
-                    sortValue = tmpValue;
-                    index = j;
-                    break;
-                }
-
-                j++;
-            }
-
-            i = right;
-            j = left;
+            j--;
         }
 
-        array[index] = sortValue;
+        while (i < point) {
+            if (array[i] > array[point]) {
+                swap(array, point, i);
+                point = i;
+                i = low;
+                continue;
+            }
+            i--;
+        }
 
-        quickSort(left, index -1, array);
-        quickSort(index + 1, right, array);
-
+        return point;
     }
 }

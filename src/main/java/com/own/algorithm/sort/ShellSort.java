@@ -3,6 +3,7 @@ package com.own.algorithm.sort;
 public class ShellSort extends BaseSort {
 
     public static void main(String[] args) {
+
         int[] array = {8, 7, 6, 9, 10, 1, -3, 6};
         new ShellSort().sort(array);
         print(array);

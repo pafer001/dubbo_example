@@ -7,13 +7,14 @@ public class MergeSort extends BaseSort {
 
     public static void main(String[] args) {
 
-        int array[] = {27, 1, 67, 1, 90};
+        int[] array = {3, 2, 6, 7, 1};
         new MergeSort().sort(array);
         print(array);
     }
 
     public void sort(int[] array) {
 
+        //错误的
         int step = 1;
         while (step <= array.length / 2) {
 

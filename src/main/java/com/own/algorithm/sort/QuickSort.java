@@ -15,35 +15,53 @@ public class QuickSort extends BaseSort {
         print(array);
     }
 
+    public void sort(int[] array, int low, int high) {
 
-    public int sort(int[] array, int low, int high) {
+        if (array == null || array.length <= 1) {
+            return;
+        }
+        if (low >= high) {
+            return;
+        }
+        final int partition = partition(array, low, high);
+        sort(array, 0, partition - 1);
+        sort(array, partition + 1, high);
+    }
 
-        int i = low + 1, j = high;
 
-        int point = low;
+    public int partition(int[] array, int low, int high) {
 
-        while (j > point) {
 
-            if (array[j] < array[point]) {
+        int v = array[low];
 
-                swap(array, point, j);
-                point = j;
-                j = high;
-                continue;
+        int i = low + 1;
+        int j = high;
+        while (true) {
+
+            while (i <= high) {
+                if (array[i] > v) {
+                    break;
+                }
+                i++;
             }
-            j--;
+
+            while (j >= low + 1) {
+                if (array[j] < v) {
+                    break;
+                }
+                j--;
+            }
+
+            if (i >= j) {
+                break;
+            }
+
+            swap(array, i, j);
         }
 
-        while (i < point) {
-            if (array[i] > array[point]) {
-                swap(array, point, i);
-                point = i;
-                i = low;
-                continue;
-            }
-            i--;
-        }
+        swap(array, low, j);
 
-        return point;
+        return j;
+
     }
 }

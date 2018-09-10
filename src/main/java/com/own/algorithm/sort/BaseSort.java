@@ -2,6 +2,17 @@ package com.own.algorithm.sort;
 
 public class BaseSort {
 
+    /**
+     * i坐标的值小于j坐标的值
+     * @param array
+     * @param i
+     * @param j
+     * @return
+     */
+    public boolean less(int[] array, int i, int j) {
+        return array[i] < array[j];
+    }
+
     public void swap(int[] array, int i, int j) {
         if (i == j) {
             return;

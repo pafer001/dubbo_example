@@ -9,7 +9,7 @@ public class QuickSort extends BaseSort {
 
     public static void main(String[] args) {
 
-        int[] array = {6, 9, 1, 5, 11};
+        int[] array = {4, 6, 1, 7, 3, 9};
         QuickSort quickSort = new QuickSort();
         quickSort.sort(array, 0, 4);
         print(array);
@@ -60,6 +60,8 @@ public class QuickSort extends BaseSort {
         }
 
         swap(array, low, j);
+
+        print(array);
 
         return j;
 

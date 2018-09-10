@@ -16,6 +16,7 @@ public class BaseSort {
         for (int a : array) {
             System.out.print(a + "\t");
         }
+        System.out.println("\n");
     }
 
 }

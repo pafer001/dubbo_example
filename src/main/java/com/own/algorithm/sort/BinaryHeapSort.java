@@ -1,13 +1,11 @@
-package com.own.algorithm.sort.exercise;
-
-import com.own.algorithm.sort.BaseSort;
+package com.own.algorithm.sort;
 
 public class BinaryHeapSort extends BaseSort {
 
 
     public static void main(String[] args) {
 
-        int[] array = {1, 7, 3, 5, 6, 0, 6};
+        int[] array = {1, 7, 3, 5, 6, 0};
 
         new BinaryHeapSort().sort(array);
         print(array);
@@ -16,7 +14,7 @@ public class BinaryHeapSort extends BaseSort {
     public void sort(int[] array) {
 
         int len = array.length - 1;
-        //1.构建大顶堆
+        //1.构建大顶堆 len / 2 - 1
         for (int k = len / 2 - 1; k >= 0; k--) {
             //从第一个非叶子结点从下至上，从右至左调整结构
             sink(array, k, len);

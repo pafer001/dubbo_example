@@ -1,7 +1,6 @@
 package com.own.algorithm.sort.exercise;
 
 import com.own.algorithm.sort.BaseSort;
-import com.own.algorithm.sort.BinaryHeapSort;
 
 public class BinaryHeapSort1 extends BaseSort {
 

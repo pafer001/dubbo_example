@@ -1,10 +1,13 @@
 package com.own.learn.jdk.cls1.classLoading;
 
 public class Dispatch {
-    static class QQ{}
-    static class _360{}
+    static class QQ {
+    }
 
-    public static class Father{
+    static class _360 {
+    }
+
+    public static class Father {
 
         public void hardChoice(QQ arg) {
             System.out.println("father choose qq");
@@ -15,7 +18,7 @@ public class Dispatch {
         }
     }
 
-    public static class Son extends Father{
+    public static class Son extends Father {
 
         public void hardChoice(QQ arg) {
             System.out.println("son choose qq");
